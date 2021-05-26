@@ -17,5 +17,7 @@ jobs:
         uses: ansible/ansible-lint-action@master
         with:
           targets: roles/
+
+      - name: ansible-lint run
         run: ansible-lint -p roles/
 
