@@ -2,11 +2,10 @@ name: Ansible Lint
 
 on:
   push:
-    branches: [main]
+    branches: [ main ]
   pull_request:
-    branches: [main]
+    branches: [ main ]
   workflow_dispatch:
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -14,9 +13,8 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
 
-      - name: Lint Ansible Playbook
+      - name: ansible-lint
         uses: ansible/ansible-lint-action@master
         with:
-          targets: |
-            roles/
+          targets: roles/
 
