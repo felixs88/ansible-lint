@@ -16,9 +16,10 @@ jobs:
       - name: ansible-lint
         uses: ansible/ansible-lint-action@master
         with:
-          targets: roles/
+          targets: "roles/"
+          args: "q"
 
-      - name: ansible-lint run
-        run: ansible-lint -p roles/
-        working-directory: /home/runner/work/ansible-lnt/ansible-lnt
+      #- name: ansible-lint run
+      #  run: ansible-lint -p roles/
+      #  working-directory: /home/runner/work/ansible-lnt/ansible-lnt
 
