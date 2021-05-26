@@ -15,11 +15,11 @@ jobs:
 
       - name: Ansible Lint - Pre-Req
         run: |
-          pip install ansible ansible-lint
+          pip install ansible-lint
 
       - name: Ansible Lint
         run: |
-          ansible-lint -p roles/
+          ansible-lint -v --force-color roles/
 
       #- name: ansible-lint
       #  uses: ansible/ansible-lint-action@master
