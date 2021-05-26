@@ -13,11 +13,19 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
 
-      - name: ansible-lint
-        uses: ansible/ansible-lint-action@master
-        with:
-          targets: "roles/"
-          args: "q"
+      - name: Ansible Lint - Pre-Req
+        run: |
+          pip install ansible, ansible-lint
+
+      - name: Ansible Lint
+        run: |
+          ansible-lint -p roles/
+
+      #- name: ansible-lint
+      #  uses: ansible/ansible-lint-action@master
+      #  with:
+      #    targets: "roles/"
+      #    args: "q"
 
       #- name: ansible-lint run
       #  run: ansible-lint -p roles/
