@@ -15,7 +15,7 @@ jobs:
 
       - name: Ansible Lint - Pre-Req
         run: |
-          pip install ansible-lint
+          pip install ansible ansible-lint
 
       - name: Ansible Lint
         run: |
