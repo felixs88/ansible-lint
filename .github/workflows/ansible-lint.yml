@@ -20,4 +20,5 @@ jobs:
 
       - name: ansible-lint run
         run: ansible-lint -p roles/
+        working-directory: /home/runner/work/ansible-lnt/ansible-lnt
 
